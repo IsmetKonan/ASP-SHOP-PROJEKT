@@ -1,0 +1,179 @@
+/* Basic <Config */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+body {
+    background-image: linear-gradient(to bottom, white, #f0f5c9);
+}
+
+#mynavbar {
+    background-color: #ffd960 !important;
+}
+
+/* Tables */
+
+
+table {
+    width: 100%;
+    border: solid;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border: solid;
+    background-color: white;
+}
+
+table th {
+    background-color: #ffd960;
+    color: black;
+    border: solid
+}
+
+/* Inputs */
+
+
+.login {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 2px auto;
+    gap: 5px;
+    padding: 0; 
+}
+
+#user, #pw {
+    border-radius: 1cm;
+    height: 1cm;
+    border-color: black;
+    color: dimgray;
+    background-color: white;
+}
+
+#label-user, #label-pw {
+    color: grey;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: small;
+}
+
+#login-btn {
+    margin-top: 0.2cm;
+    background-color: #ffd960;
+    border-radius: 1cm;
+    color: black;
+    height: 1.2cm;
+    font-family: Arial;
+}
+
+
+
+.register {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 2px auto;
+    gap: 5px;
+    padding: 0;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.register input {
+    width: 100%;
+    padding: 8px;
+}
+
+input[type="text"], input[type="number"], input[type="password"] {
+    width: 100%;
+    padding: 4px 6px;
+    margin: 0;
+}
+
+.register input {
+    margin: 0 0 5px 0;
+    box-sizing: border-box;
+}
+
+.register button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#logout {
+    background-color: red;
+    color: white;
+}
+
+#register-inp {
+    border-radius: 1cm;
+    border: solid;
+    border-width: 0.05cm;
+    height: 1.1cm;
+}
+
+#register-btn {
+    margin-top: 0.1cm;
+    background-color: #ffd960;
+    border-radius: 1cm;
+    color: black;
+    height: 1.2cm;
+    font-family: Arial;
+}
+
+
+/* Hover Effects */
+
+#register-btn:hover {
+    cursor: pointer;
+}
+
+#logout:hover {
+    background-color: darkred;
+    color: white;
+}
+
+#login-btn:hover {
+    cursor: pointer;
+}

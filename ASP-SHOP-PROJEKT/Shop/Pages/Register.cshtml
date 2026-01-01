@@ -1,0 +1,33 @@
+﻿@page
+@model RegisterModel
+
+<h2 style="text-align: center; margin-bottom: 0cm; gap: 0;">Registrieren</h2>
+
+<div class="register" style="margin-top: 0; gap: 0;">
+        
+        <form method="post">
+            <label id="label-user">Vorname:</label>
+            <input asp-for="NewUser.FirstName" placeholder="Vorname" required         id="register-inp" />
+            <label id="label-user">Nachname:</label>
+            <input asp-for="NewUser.LastName" placeholder="Nachname" required         id="register-inp" />
+            <label id="label-user">Adresse:</label>
+            <input asp-for="NewUser.Address" placeholder="Adresse" required           id="register-inp" />
+            <label id="label-user">Mail:</label>
+            <input asp-for="NewUser.Email" placeholder="E-Mail" required              id="register-inp" />
+            <label id="label-user">Telefon:</label>
+            <input asp-for="NewUser.Phone" placeholder="Telefon" required             id="register-inp" />
+            <label id="label-user">Benutzername:</label>
+            <input asp-for="NewUser.Username" placeholder="Benutzername" required     id="register-inp" />
+            <label id="label-user">Passwort:</label>
+            <input asp-for="Password" type="password" placeholder="Passwort" required id="register-inp" />
+
+            <button type="submit" id="register-btn" >Registrieren</button>
+        </form>
+
+            <div class="text-danger">
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            </div>
+</div>

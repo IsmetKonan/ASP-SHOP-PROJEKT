@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+
+<h2 style="text-align: center;">Artikel</h2>
+
+<table>
+    <tr>
+        <th>Beschreibung</th>
+        <th>Menge</th>
+        <th>Preis</th>
+    </tr>
+
+    @foreach (var a in Model.Articles)
+    {
+        <tr>
+            <td>@a.Description</td>
+            <td>@a.Quantity</td>
+            <td>@a.Price €</td>
+        </tr>
+    }
+</table>

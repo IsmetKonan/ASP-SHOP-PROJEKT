@@ -1,0 +1,62 @@
+﻿@page
+@model UsersModel
+
+<h2 style="text-align: center;">Admin – Nutzerverwaltung</h2>
+
+<h3 style="text-align: center;">Neuen Nutzer anlegen</h3>
+<div class="register">
+
+    <form method="post">
+        
+        <input asp-for="NewUser.Username" placeholder="Benutzername"             id="user" />
+        <input asp-for="NewUser.Password" type="password" placeholder="Passwort" id="user" />
+        <input asp-for="NewUser.FirstName" placeholder="Vorname"                 id="user" />
+        <input asp-for="NewUser.LastName" placeholder="Nachname"                 id="user" />
+        <input asp-for="NewUser.Email" placeholder="E-Mail"                      id="user" />
+        <input asp-for="NewUser.Phone" placeholder="Telefon"                     id="user" />
+    
+        <button type="submit" id="login-btn">Erstellen</button>
+    
+    </form>
+
+</div>
+
+<hr />
+
+<h3>Alle Nutzer</h3>
+<table>
+    <tr>
+        <th>Benutzername</th>
+        <th>Name</th>
+        <th>E-Mail</th>
+        <th>Telefon</th>
+        <th>Admin</th>
+        <th>Aktionen</th>
+    </tr>
+    
+    @foreach (var u in Model.Users)
+    {
+        <tr>
+            <td>@u.Username</td>
+            <td>@u.FirstName @u.LastName</td>
+            <td>@u.Email</td>
+            <td>@u.Phone</td>
+            <td>@(u.IsAdmin ? "Ja" : "Nein")</td>
+            <td>
+            
+            <td>
+                <form method="post" asp-page-handler="ToggleAdmin" style="display:inline;">
+                    <input type="hidden" name="userId" value="@u.Id" />
+                    <button type="submit">@((u.IsAdmin ? "Admin entfernen" : "Admin machen"))</button>
+                </form>
+
+                <form method="post" asp-page-handler="DeleteUser" style="display:inline;" onsubmit="return confirm('Bist du sicher, dass du diesen Nutzer löschen willst?');">
+                    <input type="hidden" name="userId" value="@u.Id" />
+                    <button type="submit" style="color:red;">Löschen</button>
+                </form>
+            </td>
+
+        </tr>
+    }
+
+</table>
