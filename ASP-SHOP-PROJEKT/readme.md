@@ -13,8 +13,8 @@ in shopdb
 - BEFEHL: 
 USE shopdb;
 
-Dann diesen Code ausführen,
-um die nötigen Komponenten in der Lokalen Datenbank zu erstellen:
+Dann diesen Code ausfÃ¼hren,
+um die nÃ¶tigen Komponenten in der Lokalen Datenbank zu erstellen:
 
 - BEFEHLE:
 
@@ -40,3 +40,5 @@ CREATE TABLE Articles (
 
 - In Appsettings.json
 das Passwort auf ihr Lokales MYSQL Passwort setzen.
+
+- alls letztes sich selbst durch commandprompt oder editor bei admin hinzufÃ¼gen
